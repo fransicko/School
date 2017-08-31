@@ -49,17 +49,17 @@ nav a {
    text-align: center;
    font-style: italic;
    border-style: ridge;
-   border: 8px solid #99aa33;
-   border-left: 50px solid #99aa33;
+   border-color: #99aa33;
+   border-width: 8px 8px 8px 50px;
+
 }
 
 #wrapper {
    border-radius: 15px;
    background-color: white;
-   margin-left: 10%;
-   margin-right: 10%;
+   max-width: 805;
 }
 
 #content {
-   
+   padding: 10px;
 }
