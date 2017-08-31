@@ -5,13 +5,61 @@ body {
 }
 
 h1, h2 {
-   font-family: Sans-Serif;
+   font-family: Serif;
+}
+
+h1 {
+   text-align: center;
+   background-color: #ccff99;
+   text-shadow: 3px 2px grey; 
+   border: 2px solid #333333;
+   border-radius: 15px;
+}
+
+nav {
+   padding-left:  20px;
+}
+
+nav-list {
+   border: 1px solid #333333;
+}
+
+nav a {
+   text-decoration: none;
+   background-color: #ccff99;
+   border: 1px solid #333333;
+   color: black;
+   font-weight: bold;
+   padding: 5px;
 }
 
 .company_name {
    font-weight: bold;
 }
 
-.intro {
+#intro {
    text-indent: 50px;
+}
+
+#services {
+   line-height: 1.5em;
+}
+
+.motto {
+   text-align: center;
+   font-style: italic;
+   border-style: ridge;
+   border: 8px solid #99aa33;
+   border-left: 50px solid #99aa33;
+}
+
+#wrapper {
+   border-radius: 15px;
+   background-color: white;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+#content {
+   
 }
