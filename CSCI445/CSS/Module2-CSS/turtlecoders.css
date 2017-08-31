@@ -1,0 +1,17 @@
+body {
+   background-color: #ffffcc;
+   color: #333333;
+   font-family: Sans-Serif;
+}
+
+h1, h2 {
+   font-family: Sans-Serif;
+}
+
+.company_name {
+   font-weight: bold;
+}
+
+.intro {
+   text-indent: 50px;
+}
