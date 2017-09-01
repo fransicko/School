@@ -37,6 +37,10 @@
  // for later on in case the window gets resized.
 int windowWidth = 512, windowHeight = 512;
 
+float triforceAngle = 20.0f;
+bool EVIL_TRIFORCE = false;
+double xPosition = 100.0, yPostion = 100.0;
+
 //*************************************************************************************
 //
 // Event Callbacks
@@ -58,7 +62,32 @@ static void error_callback( int error, const char* description ) {
 //*************************************************************************************
 //
 // Setup Functions
+void keyboard_callback( GLFWwindow *win, int key, int scancode, int action, int mods ) {
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+		exit(EXIT_SUCCESS);
+	}
+	
+	if (key == GLFW_KEY_C && action == GLFW_PRESS) {
+		EVIL_TRIFORCE = !(EVIL_TRIFORCE);
+	}
+}
 
+void mouse_button_callback( GLFWwindow *window, int button, int action, int mods ) {
+	if (button == GLFW_MOUSE_BUTTON_LEFT) {
+		if (action == GLFW_PRESS) {
+			EVIL_TRIFORCE = true;
+		}
+		else if (action == GLFW_RELEASE) {
+			EVIL_TRIFORCE = false;
+		}
+	}
+}
+
+void cursor_callback( GLFWwindow *window, double x, double y ) {
+	xPosition = x;
+	yPostion = windowHeight - y;
+}
+ 
 //
 //  void setupGLFW()
 //
@@ -82,7 +111,8 @@ GLFWwindow* setupGLFW() {
 	glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 2 );	// request OpenGL v2.X
 	glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 1 );	// request OpenGL v2.1
 	glfwWindowHint( GLFW_RESIZABLE, GLFW_FALSE );		// do not allow our window to be able to be resized
-
+	glfwWindowHint(GLFW_DOUBLEBUFFER, GLFW_TRUE);
+	
 	// create a window for a given size, with a given title
 	GLFWwindow *window = glfwCreateWindow( windowWidth, windowHeight, "Lab01", NULL, NULL );
 	if( !window ) {						// if the window could not be created, NULL is returned
@@ -94,7 +124,9 @@ GLFWwindow* setupGLFW() {
 	}
 
 	// TODO #2
-
+	glfwSetKeyCallback( window, keyboard_callback);
+	glfwSetMouseButtonCallback( window, mouse_button_callback );
+	glfwSetCursorPosCallback( window, cursor_callback );
 	glfwMakeContextCurrent(window);		// make the created window the current window
 	glfwSwapInterval(1);				     // update our screen after at least 1 screen refresh
 
@@ -139,7 +171,12 @@ void drawTriangle() {
 //
 void drawTriforce() {
 	// make all the vertices be a nice, golden color.
-	glColor3f( 0.9, 0.8, 0.1 );
+	if (EVIL_TRIFORCE) {
+		glColor3f( 1, 0.0, 0.0 );
+	}
+	else {
+		glColor3f( 0.9, 0.8, 0.1 );
+	}
 
   // the triangle will get rendered around the origin,
   // so move the origin to (-2.5, -2.0)
@@ -174,10 +211,10 @@ void drawTriforce() {
 void renderScene() {
   // the triforce will get rendered around the origin,
 	// so move the origin to (200,300)...
-  glm::mat4 transTri = glm::translate( glm::mat4(), glm::vec3( 200.0f, 300.0f, 0.0f ) );
+  glm::mat4 transTri = glm::translate( glm::mat4(), glm::vec3( xPosition, yPostion, 0.0f ) );
   glMultMatrixf( &transTri[0][0] ); {
     // and then rotate it by 45 degrees
-    glm::mat4 rotTri = glm::rotate( glm::mat4(), 0.758f, glm::vec3( 0.0f, 0.0f, 1.0f ) );
+    glm::mat4 rotTri = glm::rotate( glm::mat4(), triforceAngle, glm::vec3( 0.0f, 0.0f, 1.0f ) );
     glMultMatrixf( &rotTri[0][0] ); {
   		// and then scale it 10X in x and 10X in y
       glm::mat4 scaleTri = glm::scale( glm::mat4(), glm::vec3( 10.0f, 10.0f, 1.0f ) );
@@ -210,6 +247,9 @@ int main( int argc, char *argv[] ) {
     // TODO #3
 		glClear( GL_COLOR_BUFFER_BIT );	// clear the current color contents in the window
 
+		glDrawBuffer(GL_BACK);
+		glClear(GL_COLOR_BUFFER_BIT);
+		triforceAngle = triforceAngle + 0.05f;
 		// update the projection matrix based on the window size
 		// the GL_PROJECTION matrix governs properties of the view coordinates;
 		// i.e. what gets seen - use an Orthographic projection that ranges
