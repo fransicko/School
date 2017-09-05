@@ -2,13 +2,13 @@
    position: fixed;
    color: white;
    background-color: #00FFFF;
-   width: 90px;
+   width: 80px;
    top: 35px;
 }
 
 h1 {
    position: relative;
-   left: 95px;
+   left: 85px;
 }
 
 .important {
