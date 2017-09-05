@@ -2,7 +2,7 @@
    position: fixed;
    color: white;
    background-color: #00FFFF;
-   width: 75px;
+   width: 90px;
    top: 35px;
 }
 
@@ -32,7 +32,7 @@ h1 {
 
 .more-important {
    position: relative;
-   overflow: show;
+   /*overflow: show;*/
    background-color: purple;
    left: 90px;
    width: 225px;
