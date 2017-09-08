@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Facts about Michael Villafuerte">
 		<meta name="author" content="Michael Villafuerte">
+		<link rel="stylesheet" type="text/css" href="aboutme.css" />
 		<title>Facts About Michael Villafuerte</title>
 	</head>
 	<body> 
@@ -36,7 +37,7 @@
 		<br />
 	
 		<hr />
-		<h3>What does he like?</h3>
+		<h2>What does he like?</h2>
 		<ol>
 			<li>Video Games</li>
 			<li>Reading Manga</li>
@@ -46,94 +47,140 @@
 		<br />
 
 		<hr />
-		<h4>How does he spend his time?</h4>
+		<h2>How does he spend his time?</h2>
 		<p>When Michael is not doing homework or hanging out with friends hes probably going online to see what things have changed or whats
 		being updated in <abbr title="World of Warcraft">WOW</abbr>. <a href="https://www.icy-veins.com/" target="_blank">Icy-Veins</a> is an example of the type of websites
 		that he could visit to get up to date on all things WOW. Its the one game that Michael has spent the most time in and the only ones hes been
 		playing since he was a child.</p>
-                <br />
+        <br />
+			
+		<hr />
+		<h2>Favorite video games</h2>
+		<p>This is a table of his favorite video game series for different consules</p>
+		
+		<div class="game">
+			<table>
+			  <thead>
+				<tr>
+				  <th>CONSULE</th>
+				  <th>GAME</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td rowspan="2">Playstation</td>
+				  <td>Final Fantasy</td>
+				</tr>
+				<tr>
+				  <td>Kingdom Hearts</td>
+				</tr>
+				<tr>
+				  <td rowspan="2">XBox</td>
+				  <td>Gears of War</td>
+				</tr>
+				<tr>
+				  <td>Halo</td>
+				</tr>
+				
+				<tr>
+				  <td rowspan="2">PC</td>
+				  <td>World of Warcraft</td>
+				</tr>
+				<tr>
+				  <td>Diablo</td>
+				</tr>
+				<tr>
+				  <td>Hand Handle</td>
+				  <td>Pokemon</td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		
 
-                <hr />
-                <table id="school_schedule">
-                  <caption>School Schedule</caption>
-                  <thead>
-                    <tr>
-                      <th>COURSE</th>
-                      <th colspan="2">MEETING DATE/TIME</th>
-                      <th>ROOM</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td rowspan="2">CSCI 441</td>
-                      <td>MW</td>
-                      <td>1:00PM - 2:00PM</td>
-                      <td>MZ 326</td>
-                    </tr>
-                    <tr>
-                      <td>F</td>
-                      <td>1:00PM - 2:00PM</td>
-                      <td>MZ 022</td>
-                    </tr>
-                    <tr>
-                      <td>CSCI 303</td>
-                      <td>TR</td>
-                      <td>8:00AM - 9:15AM</td>
-                      <td>BB W250</td>
-                    </tr> 
-                    <tr>
-                      <td>CSCI 423</td>
-                      <td>TR</td>
-                      <td>12:30PM - 1:45PM</td>
-                      <td>MZ 235</td>
-                    </tr>
-                    <tr>
-                      <td>CSCI 471</td>
-                      <td>TR</td>
-                      <td>2:00PM - 3:45PM</td>
-                      <td>AH 151</td>
-                    </tr>
-                  </tbody>
+		<br />
+		<hr />
+		<h2>How he spends his working hours</h2>
+		<table class="school_schedule">
+		  <caption>School Schedule</caption>
+		  <thead id="school_head">
+			<tr>
+			  <th>COURSE</th>
+			  <th colspan="2">MEETING DATE/TIME</th>
+			  <th>ROOM</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td rowspan="2">CSCI 441</td>
+			  <td>MW</td>
+			  <td>1:00PM - 2:00PM</td>
+			  <td>MZ 326</td>
+			</tr>
+			<tr>
+			  <td>F</td>
+			  <td>1:00PM - 2:00PM</td>
+			  <td>MZ 022</td>
+			</tr>
+			<tr>
+			  <td>CSCI 303</td>
+			  <td>TR</td>
+			  <td>8:00AM - 9:15AM</td>
+			  <td>BB W250</td>
+			</tr> 
+			<tr>
+			  <td>CSCI 423</td>
+			  <td>TR</td>
+			  <td>12:30PM - 1:45PM</td>
+			  <td>MZ 235</td>
+			</tr>
+			<tr>
+			  <td>CSCI 471</td>
+			  <td>TR</td>
+			  <td>2:00PM - 3:45PM</td>
+			  <td>AH 151</td>
+			</tr>
+		  </tbody>
                   <tfoot>
                     <tr>
-                      <td>CSCI 445</td>
-                      <td>OL</td>
-                      <td></td>
-                      <td>TBA</td>
-                    </tr>
-                  </tfoot>
-                </table>
+		      <td>CSCI 445</td>
+		      <td>OL</td>
+		      <td></td>
+	              <td>TBA</td>
+		    </tr>
+		  </tfoot>
+		</table>
 
-                <br />
-                <table id="work_schedule">
-                  <caption>Work Schedule</caption>
-                  <thead>
+		<br />
+		<table class="work_schedule">
+		  <caption>Work Schedule</caption>
+		  <thead id="work_head">
                     <tr>
                       <th>LOCATION</th>
-                      <th>DAY</th>
-                      <th>TIME</th>
+		      <th>DAY</th>
+		      <th>TIME</th>
                     </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td rowspan="3">MEP</td>
-                      <td>M</td>
-                      <td>2:00PM - 3:00PM</td>
-                    </tr>
-                    <tr>
-                      <td>TR</td>
-                      <td>9:30AM - 11:00AM</td>
-                    </tr>
-                    <tr>
-                      <td>W</td>
-                      <td>8:00AM - 12:00PM</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br />
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td rowspan="3">MEP</td>
+			  <td>M</td>
+			  <td>2:00PM - 3:00PM</td>
+			</tr>
+			<tr>
+			  <td>TR</td>
+			  <td>9:30AM - 11:00AM</td>
+			</tr>
+			<tr>
+			  <td>W</td>
+			  <td>8:00AM - 12:00PM</td>
+			</tr>
+		  </tbody>
+		</table>
+		<br />
 
 		<hr />
-		<h5>Words of inspiration</h5>
+		<h2>Words of inspiration</h2>
 		<p>There are many inspirational quotes that someone can live by. This is one that has applied to me lately:</p>
 		<blockquote cite="http://www.starwars.com/news/the-starwars-com-10-best-yoda-quotes">
 		Do. Or do not. There is no try
