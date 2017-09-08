@@ -48,8 +48,8 @@ BUILDING_IN_LAB = 1
 CXX    = g++
 CFLAGS = -Wall -g
 
-LAB_INC_PATH = Z:/CSCI441/include
-LAB_LIB_PATH = Z:/CSCI441/lib
+LAB_INC_PATH = Z:/School/CSCI441/include
+LAB_LIB_PATH = Z:/School/CSCI441/lib
 
 # if we are not building in the Lab
 ifeq ($(BUILDING_IN_LAB), 0)
