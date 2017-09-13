@@ -1,0 +1,155 @@
+body {
+	background-image: url("../images/background.jpg");
+}
+
+table {
+	text-align: center;
+	margin-top: 20px;
+}
+
+caption {
+	font-size: 40px;
+	color: black;
+}
+
+p::first-letter {
+    color: black;
+    font-size: xx-large;
+}
+
+.school_schedule caption {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.work_schedule caption {
+	font-style: italic;
+}
+
+.school_schedule td, th{
+    border: 1px solid black;
+}
+.work_schedule td, th{
+    border: 1px solid black;
+}
+
+th {
+	height: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+}
+
+#school_head {
+	color: white;
+	background-color: #000099;
+}
+
+.school_schedule tfoot {
+	background-color: grey;
+}
+
+.work_schedule tr:nth-child(even) {background-color: #CCCCCC}
+.work_schedule thead {
+	background-color: #CCCCCC;
+}
+
+div.game th{
+    border: 1px dashed black;
+}
+
+div.game tr {
+	border-bottom: 1px dashed black;
+	border-left: 1px dashed black;
+	border-right: 1px dashed black;
+}
+
+div.game td {
+	border-left: 1px dashed black;
+	border-right: 1px dashed black;
+}
+
+div.game tr:last-child {
+	border-bottom: none;
+}
+
+
+ /* unvisited link */
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: purple;
+}
+
+/* mouse over link */
+a:hover {
+    color: #0B0080;
+}
+
+/* selected link */
+a:active {
+    color: red;
+} 
+
+
+/* This is for the navigation bar */
+.navbar {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+.navbar li {
+	float: left;
+	padding: 2px;
+}
+
+.navbar li a,
+.navbar .tutorials {
+	color: #1500FF;
+	padding: 5px 10px;
+	display: block;
+	text-align: center;
+	background-color: white;
+	text-decoration: none;
+	border: 2px solid #1500FF;
+	border-radius: 5px;
+}
+
+.navbar li a:hover,
+.navbar .dropdown:hover .tutorials{
+	background: #1500FF;
+	color: white;
+}
+
+.dropdown {
+	display:inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	padding: 0px 0px;
+	background-color: white;
+	text-decoration: none;
+	border: 2px solid #1500FF;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px black;
+}
+
+.dropdown-content a {
+	margin: 2px 2px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+

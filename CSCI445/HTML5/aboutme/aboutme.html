@@ -10,23 +10,24 @@
 	<body>
 		<header style="text-align:center">
 			<h1>Facts About Michael Villafuerte<br />
-				<img src="images/pic.jpg" alt="_blank">
+				<img src="../images/pic.jpg" alt="_blank">
 			</h1>
 		</header>
 		
 		<nav>
-			<a href="/index/">Home</a>
-			<a href="/aboutme/">About Me</a>
-			<li>
-				<a href="">CSS Tutorials</a>
-				<ul>  
-					<li><a href="/turtlecoders/">Turtle Coders</a></li>
-					<li><a href="/posEx/">Position Example</a></li>
-					<li><a href="/floatExBoxes/">The Box Model</a></li>
-					<li><a href="/clearEx/">Float and Clear</a></li>
-				</ul>                
-			</li>
-		  
+			<ul class="navbar">
+				<li><a href="/index/">Home</a></li>
+				<li><a href="/aboutme/">About Me</a></li>
+				<li class="dropdown">
+					<a href="#" class="tutorials">CSS Tutorials</a>
+					<div class="dropdown-content">
+						<a href="../csstutorials/turtlecoders.html">Turtle Coders</a>
+						<a href="../csstutorials/posEx.html">Position Example</a>
+						<a href="../csstutorials/floatExBoxes.html">The Box Model</a>
+						<a href="../csstutorials/clearEx.html">Float and Clear</a>
+					</div> 
+				</li>
+			</ul>
 		</nav>
 		
 		<!-- <img src="images/pic.jpg" style-"center"> -->
