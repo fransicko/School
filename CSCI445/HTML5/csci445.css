@@ -1,4 +1,23 @@
-/**/
+/* For responsive design */
+* {
+	box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 600px) {
+	body {
+		width: 100%;
+	}
+	ul.navbar li {
+		float: none;
+	}
+	ul.navbar li a {
+		width: 100%;
+	}
+	ul.navbar li.dropdown a {
+		width: 100%;
+	}
+}
 body {
 	background-image: url("images/background.jpg");
 }
@@ -41,8 +60,10 @@ a:active {
 	padding: 2px;
 }
 
+
 .navbar li a,
 .navbar .tutorials {
+	width: 100px;
 	color: #1500FF;
 	padding: 5px 10px;
 	display: block;
@@ -51,12 +72,15 @@ a:active {
 	text-decoration: none;
 	border: 2px solid #1500FF;
 	border-radius: 5px;
+	transition: width 2s;
 }
 
+	
 .navbar li a:hover,
 .navbar .dropdown:hover .tutorials{
 	background: #1500FF;
 	color: white;
+	width: 110px;
 }
 
 .dropdown {
@@ -88,5 +112,8 @@ a:active {
 	color: red; 
 }
 
-
+/* Transformation */
+.tutorials {
+	transform: rotate(180deg); 
+}
 
