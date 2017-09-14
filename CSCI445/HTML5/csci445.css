@@ -11,10 +11,15 @@
 	ul.navbar li {
 		float: none;
 	}
-	ul.navbar li a {
+	ul.navbar li a,
+	ul.navbar li.dropdown,
+	ul.navbar li.dropdown a, 
+	ul.navbar li.dropdown div.dropdown-content {
+		transition: none;
 		width: 100%;
 	}
-	ul.navbar li.dropdown a {
+	ul.navbar li a:hover,
+	ul.navbar li.dropdown:hover .tutorials {
 		width: 100%;
 	}
 }
