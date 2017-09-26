@@ -3,12 +3,14 @@ var canvas, ctx, img, rect, pic, btn;
 
 canvas = document.getElementById("myCanvas");
 btn = document.getElementById("btn");
+img = document.getElementById("happy_face");
 ctx = canvas.getContext("2d");
 
 window.onload = function() {
-	img = new Image();
+	//img = new Image();
 	img.src = "../images/naaru_light.png";
 	pic = "light";
+	btn.innerText = "Darkness!!"
 	ctx.drawImage(img, 15, 10);
 }
 
@@ -48,12 +50,14 @@ canvas.addEventListener("click", function(evt) {
 			img.src = "../images/naaru_dark.png";
 			//alert("light");
 			pic = "dark";
+			btn.innerText = "Light!!";
 			ctx.drawImage(img, 15, 10);
 		} else {
 			//img.src = "../images/naaru_light.png";
 			img.src = "../images/naaru_light.png";
 			//alert("dark");
 			pic = "light";
+			btn.innerText = "Darkness!!"
 			ctx.drawImage(img, 15, 10);
 		}
 	} else {
@@ -68,12 +72,14 @@ btn.addEventListener("click", function() {
 		img.src = "../images/naaru_dark.png";
 		//alert("light");
 		pic = "dark";
+		btn.innerText = "Light!!";
 		ctx.drawImage(img, 15, 10);
 	} else {
 		//img.src = "../images/naaru_light.png";
 		img.src = "../images/naaru_light.png";
 		//alert("dark");
 		pic = "light";
+		btn.innerText = "Darkness!!"
 		ctx.drawImage(img, 15, 10);
 	}
 });

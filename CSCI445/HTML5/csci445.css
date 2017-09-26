@@ -95,6 +95,7 @@ a:active {
 .dropdown-content {
 	display: none;
 	position: absolute;
+	z-index: 10;
 	padding: 0px 0px;
 	background-color: white;
 	text-decoration: none;
@@ -114,7 +115,8 @@ a:active {
 #active {
 	background-color: yellow;
 	border-color: red;
-	color: red; 
+	color: red;
+	pointer-events: none;
 }
 
 /* Transformation */
