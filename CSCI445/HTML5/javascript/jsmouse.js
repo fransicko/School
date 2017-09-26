@@ -1,8 +1,9 @@
 // To load the image 
-var canvas, ctx, img, rect, pic;
+var canvas, ctx, img, rect, pic, btn;
 
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+canvas = document.getElementById("myCanvas");
+btn = document.getElementById("btn");
+ctx = canvas.getContext("2d");
 
 window.onload = function() {
 	img = new Image();
@@ -60,3 +61,19 @@ canvas.addEventListener("click", function(evt) {
 	}
 	
 }, false);
+
+// THis is the button listener.
+btn.addEventListener("click", function() {
+	if (pic === "light") {
+		img.src = "../images/naaru_dark.png";
+		//alert("light");
+		pic = "dark";
+		ctx.drawImage(img, 15, 10);
+	} else {
+		//img.src = "../images/naaru_light.png";
+		img.src = "../images/naaru_light.png";
+		//alert("dark");
+		pic = "light";
+		ctx.drawImage(img, 15, 10);
+	}
+});
