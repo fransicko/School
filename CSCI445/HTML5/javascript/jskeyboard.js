@@ -25,7 +25,7 @@ function move() {
 }
 
 // THis is for the arrow key movements
-window.addEventListener("keydown", function moveSomething(e) {
+window.addEventListener("keydown", function(e) {
     switch(e.keyCode) {
         case 37:
             // left key pressed
@@ -42,7 +42,7 @@ window.addEventListener("keydown", function moveSomething(e) {
         case 39:
             // right key pressed
 			xPos = xPos + 5;
-			if (xPos+100 => rect.width) xPos = rect.width-100;
+			if (xPos+100 >= rect.width) xPos = rect.width-100;
 			move();
             break;
         case 40:
@@ -54,9 +54,3 @@ window.addEventListener("keydown", function moveSomething(e) {
     }
 }, false);
 
-//img.src = "../images/naaru_dark.png";
-		//alert("light");
-		//pic = "frown";
-		//btn.innerText = "Smile";
-		//ctx.drawImage(img, 15, 10);
- 
