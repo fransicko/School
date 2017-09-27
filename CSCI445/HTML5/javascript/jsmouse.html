@@ -19,8 +19,13 @@
 			<ul class="navbar">
 				<li><a href="../index.html">Home</a></li>
 				<li><a href="../aboutme/aboutme.html">About Me</a></li>
-				<li><a href="/jsmouse/" id="active">JS Mouse</a></li>
-				<li><a href="jskeyboard.html">JS Keyboard</a></li>
+				<li class="dropdown">
+					<a href="#" class="javascript">JavaScript</a>
+					<div class="dropdown-content">
+						<a href="/jsmouse/" id="active">Mouse</a>
+						<a href="jskeyboard.html" >Keyboard</a>
+					</div> 
+				</li>
 				<li class="dropdown">
 					<a href="#" class="tutorials">CSS Tutorials</a>
 					<div class="dropdown-content">
@@ -37,17 +42,13 @@
 		<img id="happy_face" src="../images/naaru_light.png" alt="_blank" style="display:none">
 		
 		<div style="position: relative; width: 230px; height: 300px;">
-			<canvas id="myCanvas" width="230px" height="300px"
-			style="border:1px solid #d3d3d3;">
+			<canvas id="myCanvas" style="width: 230px; height: 300px; border:1px solid #d3d3d3;">
 			Your browser does not support the HTML5 canvas tag.
 			</canvas>
 			<button id="btn" style="width: 100px; hight: 30px; position: absolute; left: 30%; bottom: 2%;"></button>
 		</div>
 
 		<script src="jsmouse.js"></script>
-		
-		<section>
-		</section>
 		
 		<footer>
 			<hr />

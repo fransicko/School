@@ -19,7 +19,8 @@
 		width: 100%;
 	}
 	ul.navbar li a:hover,
-	ul.navbar li.dropdown:hover .tutorials {
+	ul.navbar li.dropdown:hover .tutorials, 
+	ul.navbar li.dropdown:hover .javascript {
 		width: 100%;
 	}
 }
@@ -67,7 +68,8 @@ a:active {
 
 
 .navbar li a,
-.navbar .tutorials {
+.navbar .tutorials,
+.navbar .javascript {
 	width: 100px;
 	color: #1500FF;
 	padding: 5px 10px;
@@ -82,7 +84,8 @@ a:active {
 
 	
 .navbar li a:hover,
-.navbar .dropdown:hover .tutorials{
+.navbar .dropdown:hover .tutorials,
+.navbar .dropdown:hover .javascript {
 	background: #1500FF;
 	color: white;
 	width: 110px;
