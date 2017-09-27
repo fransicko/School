@@ -10,8 +10,8 @@ ctx = canvas.getContext("2d");
 window.onload = function() {
 	//img = new Image();
 	//img.src = "../images/naaru_light.png";
-	//pic = "light";
-	btn.innerText = "frown"
+	pic = "smile";
+	btn.innerText = "Frown"
 	//ctx.drawImage(img, 15, 10);
 	drawSmileFace();
 }
@@ -87,15 +87,15 @@ function getMousePos(canvas, event) {
 	};
 }
 
-// Checks to see if hte click was inside the canvas rectangle
-function insideRec(pos, rect) {
-	return (pos.x > rect.x) && (pos.x < rect.x + rect.width) && (pos.y > rect.y) && (pos.y < rect.y + rect.height);
+function insideCircle(pos, circle) {
+	var distance = Math.sqrt(Math.pow(pos.x - circle.x, 2) + Math.pow(pos.y - circle.y, 2));
+	return distance <= circle.radius;
 }
-
 // Defining the image bounderies, the width and hieght were taken from the image properties
 rect = {
-	x:15,
-	y:10,
+	x:115,
+	y:110,
+	radius:100,
 	width:215,
 	height:210
 };
@@ -103,8 +103,8 @@ rect = {
 // adding the click event
 canvas.addEventListener("click", function(evt) {
 	var mousePos = getMousePos(canvas, evt);
-	
-	if (insideRec(mousePos, rect)) {
+	//alert(pic);
+	if (insideCircle(mousePos, rect)) {
 		//alert("clicked ubsude rect");
 		if (pic === "smile") {
 			pic = "frown";
@@ -112,7 +112,8 @@ canvas.addEventListener("click", function(evt) {
 			//ctx.drawImage(img, 15, 10);
 			ctx.clearRect(0, 0, rect.width, rect.height);
 			drawFrownFace();
-		} else {
+		} else if (pic === "frown") {
+			//alert("frown?");
 			pic = "smile";
 			btn.innerText = "Frown"
 			//ctx.drawImage(img, 15, 10);
