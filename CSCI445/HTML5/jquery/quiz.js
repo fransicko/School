@@ -56,7 +56,7 @@ $(document).ready(function(){
 				default:
 					break;
 			}
-			
+			$("#game").html('<img src="../images/victory.jpg"/>');
 		}
 		else if ($("#input2").is(":checked")) { // False
 			switch($(".question p").text()) {
