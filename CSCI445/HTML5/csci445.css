@@ -119,7 +119,7 @@ a:active {
 	background-color: yellow;
 	border-color: red;
 	color: red;
-	pointer-events: none;
+	/*pointer-events: none;*/
 }
 
 /* Transformation */

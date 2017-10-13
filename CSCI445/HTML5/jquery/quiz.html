@@ -37,6 +37,16 @@
 		.questions a:hover {
 			color: white;
 		}
+		
+		#qtn, #answer {
+			position: absolute;
+			margin-left:55%;
+			font-size: 30px;
+		}
+		
+		#answer {
+		margin-top: 25%;
+		}
 		</style>
 	</head>
 	
@@ -71,45 +81,45 @@
 			</ul>
 		</nav>
 		
-		<section>
-		
-		<div style="height:500px; background-color:brown; ">
-			<div id="game" style="position:absolute"></div>
-			<aside style="background-color:#9AFFF9; width:250px; height:100%; left:0; float:left;">
-				<h1 style="color:#0C7708">Question History</h1>
-				<ul id="result">
-				</ul>
-			</aside>
-			
-			<section>
-				<div class="question" style="background-color:lightgrey; height:120px; width:500px; float:right; margin-right:125px; margin-top:80px;">
-					<p></p>
-				</div>
+		<div>
+			<img id="game" src="../images/victory.jpg" alt="_blank" style="z-index: 10; position:absolute; display:none;"/>
+			<div style="height:500px; background-color:brown; ">
+				<aside style="background-color:#9AFFF9; width:250px; height:100%; left:0; float:left;">
+					<h2 style="color:#0C7708">Question History</h2>
+					<ul id="result">
+					</ul>
+				</aside>
 				
-				<div style="background-color:lightgrey; height:120px; width:500px; float:right; margin-right:125px; margin-top:100px;">
-					<form class="submit" style="margin-left:5px;">
-						<label for="input1">True:</label>
-						<input type="radio" name="response" id="input1" value="true" required><br>
+				<section>
+					<h2 id="qtn">Question</h2>
+					<div class="question" style="background-color:lightgrey; height:120px; width:500px; float:right; margin-right:125px; margin-top:80px;">
+						<p></p>
+					</div>
+					
+					<h2 id="answer">Answer</h2>
+					<div style="background-color:lightgrey; height:120px; width:500px; float:right; margin-right:125px; margin-top:100px;">
+						<form class="submit" style="margin-left:5px;">
+							<fieldset>
+								<label for="input1">True:</label>
+								<input type="radio" name="response" id="input1" value="true" required><br>
 
-						<label for="input2">False:</label>
-						<input type="radio" name="response" id="input2" value="false"><br>
-
-						<input type="button" id="subButton" value="Check Answer">
-					</form>
-				</div>
-			</section>
-			
-			<section>
-				<div class="questions">
-					<a href="#" id="war">Warcheif</a></li>
-					<a href="#" id="exp">Expansion</a></li>
-					<a href="#" id="leg">Legion</a></li>
-					<a href="#" id="cla">Class</a></li>
-				</div>
-			</section>
+								<label for="input2">False:</label>
+								<input type="radio" name="response" id="input2" value="false"><br>
+							</fieldset>
+							
+							<input type="button" id="subButton" value="Check Answer">
+						</form>
+					</div>
+				
+					<div class="questions">
+						<a href="#" id="war">Warcheif</a>
+						<a href="#" id="exp">Expansion</a>
+						<a href="#" id="leg">Legion</a>
+						<a href="#" id="cla">Class</a>
+					</div>
+				</section>
+			</div>
 		</div>
-		
-		</section>
 		
 		<footer>
 			<hr />

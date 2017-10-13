@@ -1,6 +1,10 @@
 $(document).ready(function(){
 	// this is to make sure that the checkboxes are not checked
 	$("input[name=response]").prop('checked', false);
+	// This is to allow me the knowledge that all the questions have been answered
+	var answered, over;
+	answered = 0;
+	over = false;
 	
 	$(".questions a").mouseenter(function() {
 		$(this).css("background", "#1500FF");
@@ -13,6 +17,13 @@ $(document).ready(function(){
 		if ($(".question p").text() === "Click to see the question") {
 			$(".question p").text("");
 		}
+	});
+	
+	$("#game").dblclick(function() {
+		$("#game").fadeOut(1000, function(){
+			location.reload();
+		});
+		
 	});
 	
 	$(".questions a#war").click(function() {
@@ -33,9 +44,11 @@ $(document).ready(function(){
 	});
 	
 	$("#subButton").click(function() {
-		//$('input[name=Choose]').attr('checked',false);
 		var value = $("input[name=response]:checked").val();
-		if ($("#input1").is(":checked")) { // True
+		if ($(".question p").text() === "") {
+			alert("You must pick a question.");
+		}
+		else if ($("#input1").is(":checked")) { // True
 			switch($(".question p").text()) {
 				case "Sylvanas is the current Warcheif.":
 					$("#result").append("<li>Warcheif: Correct!</li>");
@@ -56,7 +69,7 @@ $(document).ready(function(){
 				default:
 					break;
 			}
-			$("#game").html('<img src="../images/victory.jpg"/>');
+			answered += 1;
 		}
 		else if ($("#input2").is(":checked")) { // False
 			switch($(".question p").text()) {
@@ -79,15 +92,20 @@ $(document).ready(function(){
 				default:
 					break;
 			}
+			answered += 1;
 		}
 		else {
 			alert("You muse chose an answer!!");
 		}
 		
+		if (answered === 4) {
+			$("#game").fadeIn();
+			over = true;
+		}
+		
 		// resetting
 		$(".question p").text("");
 		$("input[name=response]").prop('checked', false);
-		//var value = $("input[name=response]:checked").val();
 	});
 	
 });
